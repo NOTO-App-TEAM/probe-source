@@ -1,0 +1,15 @@
+name: Source workflow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    name: Produce a run to trigger the callback
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Say hello
+        run: echo "source workflow finished"
